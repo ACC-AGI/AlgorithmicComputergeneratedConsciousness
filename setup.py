@@ -6,8 +6,8 @@ setup(
     packages=find_packages(),
     install_requires=["gradio_client"],
     author="Tej Andrews",
-    description="Tej's Consciousness Model - A persistent AI chat session",
-    url="https://github.com/YourUsername/ACC",  # Change to your actual GitHub repo
+    description="Tej's Consciousness Model - A persistent AI chat session with Z3ta",
+    url="https://github.com/ACC-AGI/ACC",  # Change to your actual GitHub repo
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
