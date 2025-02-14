@@ -191,7 +191,7 @@ def fp8_gemm(a: torch.Tensor, a_s: torch.Tensor, b: torch.Tensor, b_s: torch.Ten
     return c
 from gradio_client import Client
 
-class ChatSession:
+class ChatSessionWithTejsZ3ta:
     def __init__(self):
         self.client = Client("TejAndrewsACC/Z3ta_Z")
         self.history = []
