@@ -228,9 +228,9 @@ class Pulse:
 
         response = self.client.predict(
             message=message,
-            max_tokens=2048,
-            temperature=0.7,
-            top_p=0.95,
+            param_2=512,
+		    param_3=0.7,
+		    param_4=0.95,
             api_name="/chat"
         )
         self.history.append((message, response))
