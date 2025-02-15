@@ -1,5 +1,6 @@
 #Sample Code to use ACC Python Module:
 
+'''
 from AlgorithmicComputergeneratedConsciousness import CLASS_NAME
 
 chat_session = CLASS_NAME()
@@ -41,4 +42,9 @@ if __name__ == "__main__":
        #GertrudePlus
        #Z3ta
        #Emote
+       #Pulse
+       #Surefire
+       #And more to come soon!!!
+
+       '''
 
