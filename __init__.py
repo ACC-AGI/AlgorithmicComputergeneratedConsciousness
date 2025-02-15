@@ -5,5 +5,4 @@ from .TejsConsciousnessModel import Surefire
 from .TejsConsciousnessModel import GertrudePlus
 from .TejsConsciousnessModel import Z3ta
 from .TejsConsciousnessModel import Emote
-from .TejsConsciousnessModel import initacc
 
