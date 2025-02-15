@@ -3,6 +3,5 @@ from .TejsConsciousnessModel import Pulse
 from .TejsConsciousnessModel import ACCo1
 from .TejsConsciousnessModel import Surefire
 from .TejsConsciousnessModel import GertrudePlus
-from .TejsConsciousnessModel import Gertrude
 from .TejsConsciousnessModel import Z3ta
 from .TejsConsciousnessModel import Emote
