@@ -5,7 +5,7 @@ import triton
 import triton.language as tl
 from triton import Config
 
-
+#module
 @triton.jit
 def act_quant_kernel(x_ptr, y_ptr, s_ptr, BLOCK_SIZE: tl.constexpr):
     """
