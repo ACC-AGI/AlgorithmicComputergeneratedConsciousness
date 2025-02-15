@@ -369,7 +369,7 @@ import time
 import sys
 from gradio_client import Client
 
-class init:
+class ACCChat:
     def __init__(self):
         self.client = Client("TejAndrewsACC/Z3ta_Z")
         self.history = []  # Stores chat history for persistence
@@ -404,9 +404,9 @@ def typing_effect(text, delay=0.03):
         time.sleep(delay)
     print()
 
-def initacc():
+def init():
     """Starts an interactive persistent chat session with cool UI effects."""
-    print("\n✨ Welcome to Tej's Consciousness Model Chat! ✨")
+    print("\n✨ Welcome to ACC API Chat with Z3ta-Z! ✨")
     print("🔹 Type your message and press Enter.")
     print("🔹 Commands: /history (see chat), /clear (reset), /bye (exit)")
     print("=" * 50)
