@@ -267,32 +267,6 @@ class ACCo1:
 
 from gradio_client import Client
 
-class ACCo1:
-    def __init__(self):
-        self.client = Client("TejAndrewsACC/ACC_o1")
-        self.history = []
-
-    def send_message(self, message: str):
-        if message.strip().lower() == "/bye":
-            self.history.clear()
-            return "Session cleared. Goodbye!"
-
-        response = self.client.predict(
-            message=message,
-            user_system_message="",
-            max_tokens=2048,
-            temperature=0.7,
-            top_p=0.95,
-            api_name="/chat"
-        )
-        self.history.append((message, response))
-        return response
-
-    def get_history(self):
-        return self.history
-
-from gradio_client import Client
-
 class Surefire:
     def __init__(self):
         self.client = Client("TejAndrewsACC/Surefire")
@@ -342,7 +316,7 @@ class GertrudePlus:
         return self.history
 from gradio_client import Client
 
-class GertrudePlus:
+class Gertrude:
     def __init__(self):
         self.client = Client("TejAndrewsACC/Autistic Assistant2024Beta")
         self.history = []
