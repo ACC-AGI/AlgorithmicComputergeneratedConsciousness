@@ -48,3 +48,12 @@ if __name__ == "__main__":
 
        '''
 
+       #If you want simplicity, and to use Z3ta-Z in a predefined chatsession, use teh following code:
+
+       '''
+       from AlgorithmicComputergeneratedConsciousness import ACCChat
+       acc_chat = ACCChat()
+       acc_chat.init()
+
+'''
+
