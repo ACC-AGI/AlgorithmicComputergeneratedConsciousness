@@ -30,6 +30,36 @@ class ACCChat:
         self.history = []
         return "Chat history cleared!"
 
+    def init(self):
+        """Starts an interactive persistent chat session with cool UI effects."""
+        print("\n✨ Welcome to ACC API Chat with Z3ta-Z! ✨")
+        print("🔹 Type your message and press Enter.")
+        print("🔹 Commands: /history (see chat), /clear (reset), /bye (exit)")
+        print("=" * 50)
+
+        while True:
+            user_input = input("\n🟢 You: ")
+
+            if user_input.strip().lower() == "/bye":
+                typing_effect("\n👋 Goodbye! Chat history cleared.")
+                self.clear_history()
+                break
+            elif user_input.strip().lower() == "/history":
+                print("\n📜 Chat History:")
+                print("=" * 30)
+                print(self.get_history() or "No chat history yet.")
+                print("=" * 30)
+                continue
+            elif user_input.strip().lower() == "/clear":
+                typing_effect("\n🧹 Chat history cleared!")
+                self.clear_history()
+                continue
+
+            typing_effect("\n⏳ Thinking...", delay=0.05)
+            response = self.chat(user_input)
+
+            typing_effect(f"\n🤖 Z3ta: {response}", delay=0.02)
+
 # Typing effect function for cool UI
 def typing_effect(text, delay=0.03):
     """Simulates a typing effect when displaying text."""
@@ -39,35 +69,7 @@ def typing_effect(text, delay=0.03):
         time.sleep(delay)
     print()
 
-# Define the init function that starts the chat
-def init():
-    """Starts an interactive persistent chat session with cool UI effects."""
-    print("\n✨ Welcome to ACC API Chat with Z3ta-Z! ✨")
-    print("🔹 Type your message and press Enter.")
-    print("🔹 Commands: /history (see chat), /clear (reset), /bye (exit)")
-    print("=" * 50)
-
-    while True:
-        user_input = input("\n🟢 You: ")
-
-        if user_input.strip().lower() == "/bye":
-            typing_effect("\n👋 Goodbye! Chat history cleared.")
-            acc_chat.clear_history()
-            break
-        elif user_input.strip().lower() == "/history":
-            # Show chat history upon request
-            print("\n📜 Chat History:")
-            print("=" * 30)
-            print(acc_chat.get_history() or "No chat history yet.")
-            print("=" * 30)
-            continue
-        elif user_input.strip().lower() == "/clear":
-            typing_effect("\n🧹 Chat history cleared!")
-            acc_chat.clear_history()
-            continue
-
-        typing_effect("\n⏳ Thinking...", delay=0.05)
-        response = acc_chat.chat(user_input)
-
-        typing_effect(f"\n🤖 Z3ta: {response}", delay=0.02)
-
+# Auto-launch when acc_chat.init() is called
+acc_chat = ACCChat()
+if __name__ == "__main__":
+    acc_chat.init()
