@@ -378,9 +378,9 @@ class Emote:
 
         response = self.client.predict(
             message=message,
-            param_2=2048,
-            param_3=0.7,
-            param_4=0.95,
+            max_tokens=512,
+	    temperature=0.7,
+	    top_p=0.95,
             api_name="/chat"
         )
         self.history.append((message, response))
