@@ -71,6 +71,3 @@ def init():
 
         typing_effect(f"\n🤖 Z3ta: {response}", delay=0.02)
 
-# Initialize the chat session and run
-acc_chat = ACCChat()
-init()
