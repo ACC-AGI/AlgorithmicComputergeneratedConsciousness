@@ -369,6 +369,7 @@ import time
 import sys
 from gradio_client import Client
 
+# Define ACCChat class
 class ACCChat:
     def __init__(self):
         self.client = Client("TejAndrewsACC/Z3ta_Z")
@@ -396,6 +397,7 @@ class ACCChat:
         self.history = []
         return "Chat history cleared!"
 
+# Typing effect function for cool UI
 def typing_effect(text, delay=0.03):
     """Simulates a typing effect when displaying text."""
     for char in text:
@@ -404,6 +406,7 @@ def typing_effect(text, delay=0.03):
         time.sleep(delay)
     print()
 
+# Define the init function that starts the chat
 def init():
     """Starts an interactive persistent chat session with cool UI effects."""
     print("\n✨ Welcome to ACC API Chat with Z3ta-Z! ✨")
@@ -419,6 +422,7 @@ def init():
             acc_chat.clear_history()
             break
         elif user_input.strip().lower() == "/history":
+            # Show chat history upon request
             print("\n📜 Chat History:")
             print("=" * 30)
             print(acc_chat.get_history() or "No chat history yet.")
@@ -434,7 +438,10 @@ def init():
 
         typing_effect(f"\n🤖 Z3ta: {response}", delay=0.02)
 
+# Initialize the chat session and run
 acc_chat = ACCChat()
+init()
+
 
 
 
