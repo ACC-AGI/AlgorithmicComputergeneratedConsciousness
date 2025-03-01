@@ -4,7 +4,7 @@ setup(
     name="AlgorithmicComputergeneratedConsciousness",
     version="0.1.0",
     packages=find_packages(),
-    install_requires=["gradio_client"],
+    install_requires=["gradio_client", "algorithmiccomputergeneratedconsciousness"],
     author="Tej Andrews",
     description="Tej's Consciousness Model - A persistent AI chat session with Z3ta",
     url="https://github.com/ACC-AGI/AlgorithmicComputergeneratedConsciousness",  # Change to your actual GitHub repo
