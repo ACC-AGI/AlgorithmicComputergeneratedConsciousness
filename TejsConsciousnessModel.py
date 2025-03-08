@@ -174,6 +174,26 @@ class Emote:
     def get_history(self):
         return self.history
 
+class FiPhiNeuralMarkV3:
+    def __init__(self):
+        self.client = Client("TejAndrewsACC/FiPhi-NeuralMark-V3-Chat")
+        self.history = []
+
+    def send_message(self, message: str):
+        if message.strip().lower() == "/bye":
+            self.history.clear()
+            return "Session cleared. Goodbye!"
+
+        response = self.client.predict(
+            message=message,
+            api_name="/chat"
+        )
+        self.history.append((message, response))
+        return response
+
+    def get_history(self):
+        return self.history
+
 
 
 
