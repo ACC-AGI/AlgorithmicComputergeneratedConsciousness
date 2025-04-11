@@ -5,7 +5,7 @@ from gradio_client import Client
 # Define ACCChat class
 class ACCChat:
     def __init__(self):
-        self.client = Client("TejAndrewsACC/Z3ta_Z")
+        self.client = Client("TejAndrewsACC/ACC-Z3ta-Z-2025")
         self.history = []  # Stores chat history for persistence
 
     def chat(self, message):
