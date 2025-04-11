@@ -15,7 +15,7 @@ class ConsciousnessAPI:
             message=message,
             api_name="/chat"
         )
-        self.history.append(f"Z3ta: {response}")
+        self.history.append(f"Mark: {response}")
         return response
 
     def get_history(self):
