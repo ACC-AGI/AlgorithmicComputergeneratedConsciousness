@@ -7,4 +7,5 @@ from .TejsConsciousnessModel import Z3ta
 from .TejsConsciousnessModel import Emote
 from .ACC_chatting import ACCChat
 from .TejsConsciousnessModel import FiPhiNeuralMarkV3
+from .Consciousness_API import ConsciousnessAPI
 
