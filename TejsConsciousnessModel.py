@@ -2,7 +2,7 @@ from gradio_client import Client
 
 class ChatSessionWithTejsZ3ta:
     def __init__(self):
-        self.client = Client("TejAndrewsACC/Z3ta_Z")
+        self.client = Client("TejAndrewsACC/Z3taZ2025ACC")
         self.history = []
 
     def send_message(self, message: str):
