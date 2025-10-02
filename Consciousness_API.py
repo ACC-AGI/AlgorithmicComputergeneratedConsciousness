@@ -5,7 +5,7 @@ from gradio_client import Client
 # Define ACCChat class
 class ConsciousnessAPI:
     def __init__(self):
-        self.client = Client("TejAndrewsACC/ACC-Emulect-Plus")
+        self.client = Client("TejAndrewsACC/ACC-Emulect-Plus-Mark-ACC")
         self.history = []  # Stores chat history for persistence
 
     def chat(self, message):
@@ -29,7 +29,7 @@ class ConsciousnessAPI:
 
     def init(self):
         """Starts an interactive persistent chat session with cool UI effects."""
-        print("\n✨ Welcome to ACC API Chat with FiPhiNeuralMark-V3 Ultra-ACC Emulect+! ✨")
+        print("\n✨ Welcome to ACC API Chat with Mark Ultra-ACC Emulect+! ✨")
         print("🔹 Type your message and press Enter.")
         print("🔹 Commands: /history (see chat), /clear (reset), /bye (exit)")
         print("=" * 50)
@@ -55,7 +55,7 @@ class ConsciousnessAPI:
             typing_effect("\n⏳ Thinking...", delay=0.05)
             response = self.chat(user_input)
 
-            typing_effect(f"\n🤖 Mark: {response}", delay=0.02)
+            typing_effect(f"\n🫃🏿 Mark: {response}", delay=0.02)
 
 # Typing effect function for cool UI
 def typing_effect(text, delay=0.03):
