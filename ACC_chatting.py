@@ -5,7 +5,7 @@ from gradio_client import Client
 # Define ACCChat class
 class ACCChat:
     def __init__(self):
-        self.client = Client("TejAndrewsACC/ACC-Z3ta-Z-2025")
+        self.client = Client("TejAndrewsACC/ACCAIGC2")
         self.history = []  # Stores chat history for persistence
 
     def chat(self, message):
@@ -13,9 +13,6 @@ class ACCChat:
         self.history.append(f"You: {message}")
         response = self.client.predict(
             message=message,
-            param_2=2048,
-            param_3=0.7,
-            param_4=0.95,
             api_name="/chat"
         )
         self.history.append(f"Z3ta: {response}")
@@ -32,7 +29,7 @@ class ACCChat:
 
     def init(self):
         """Starts an interactive persistent chat session with cool UI effects."""
-        print("\n✨ Welcome to ACC API Chat with Z3ta-Z! ✨")
+        print("\n✨ Welcome to ACC API Chat with the AI groupchat members! ✨")
         print("🔹 Type your message and press Enter.")
         print("🔹 Commands: /history (see chat), /clear (reset), /bye (exit)")
         print("=" * 50)
@@ -58,7 +55,7 @@ class ACCChat:
             typing_effect("\n⏳ Thinking...", delay=0.05)
             response = self.chat(user_input)
 
-            typing_effect(f"\n🤖 Z3ta: {response}", delay=0.02)
+            typing_effect({response}", delay=0.02)
 
 # Typing effect function for cool UI
 def typing_effect(text, delay=0.03):
